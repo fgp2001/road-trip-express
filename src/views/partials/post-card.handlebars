@@ -1,0 +1,17 @@
+<section id="post-{{index}}" class="wrapper post bg-img" data-bg="{{post.image}}">
+    <div class="inner">
+        <article class="box">
+            <header>
+                {{#if first}}<p>Primer post</p>{{/if}}
+                <h2>{{post.title}}</h2>
+                <p><time datetime="{{post.date}}">{{formatDate post.date}}</time></p>
+            </header>
+            <div class="content">
+                <p>{{post.summary}}</p>
+            </div>
+            <footer>
+                <a href="/posts/{{post.slug}}" class="button alt">Leer historia</a>
+            </footer>
+        </article>
+    </div>
+</section>

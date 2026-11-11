@@ -1,0 +1,17 @@
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #ffda79;
+    outline-offset: 4px;
+}
+
+#menu a.active {
+    color: #f5a4ab;
+    font-weight: bold;
+}
+
+.contact-feedback {
+    scroll-margin-top: 5rem;
+}

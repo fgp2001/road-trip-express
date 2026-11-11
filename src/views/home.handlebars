@@ -1,0 +1,6 @@
+<main>
+    {{> banner}}
+    {{#each posts}}
+        {{> post-card post=this index=@index first=@first}}
+    {{/each}}
+</main>

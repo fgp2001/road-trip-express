@@ -1,0 +1,15 @@
+<main id="main" class="container">
+    <article class="box">
+        <header>
+            <h1>{{post.title}}</h1>
+            <p><time datetime="{{post.date}}">{{formatDate post.date}}</time></p>
+        </header>
+        <span class="image fit"><img src="/images/{{post.image}}" alt="{{post.title}}" /></span>
+        <div class="content">
+            {{#each post.body}}
+            <p>{{this}}</p>
+            {{/each}}
+        </div>
+        <footer><a href="/" class="button alt">Volver al inicio</a></footer>
+    </article>
+</main>

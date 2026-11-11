@@ -1,0 +1,37 @@
+<h2>Contacto</h2>
+
+{{#if contact.sent}}
+<p class="contact-feedback" role="status"><strong>¡Gracias! Recibimos tu formulario de demostración.</strong></p>
+{{/if}}
+
+{{#if contact.errors.length}}
+<div class="contact-feedback" role="alert">
+    <p>Revisá estos campos:</p>
+    <ul>
+        {{#each contact.errors}}
+        <li>{{this}}</li>
+        {{/each}}
+    </ul>
+</div>
+{{/if}}
+
+<form action="/contact#footer" method="post">
+    <div class="field half first">
+        <label for="name">Nombre</label>
+        <input name="name" id="name" type="text" placeholder="Nombre" autocomplete="name" value="{{contact.name}}"
+            required minlength="2" />
+    </div>
+    <div class="field half">
+        <label for="email">Email</label>
+        <input name="email" id="email" type="email" placeholder="Email" autocomplete="email" value="{{contact.email}}"
+            required />
+    </div>
+    <div class="field">
+        <label for="message">Mensaje</label>
+        <textarea name="message" id="message" rows="6" placeholder="Mensaje" required
+            minlength="10">{{contact.message}}</textarea>
+    </div>
+    <ul class="actions">
+        <li><input value="Enviar mensaje" class="button alt" type="submit" /></li>
+    </ul>
+</form>
